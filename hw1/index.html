@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>协议报文解析器 — HW1</title>
+</head>
+<body>
+
+  <header>
+    <h1>协议报文解析器</h1>
+    <p>粘贴 Wireshark "Copy as Hex Dump" 的内容，自动解析 Ethernet II / IPv4 / TCP / ICMP 各层字段</p>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <label class="input-label" for="input">
+        Hex Dump 输入
+        <span class="hint">Ctrl+Enter 快速解析</span>
+      </label>
+      <textarea
+        id="input"
+        rows="9"
+        spellcheck="false"
+        placeholder="0000   14 30 04 7d 8b 3c 50 eb f8 4a a8 62 08 00 45 00  .0.}.&lt;P..J.b..E.
+0010   00 3c 1f 2a 40 00 40 06 00 00 c0 a8 01 05 c0 a8  .&lt;.*@.@.........
+0020   01 01 c5 58 00 50 ...                            ...X.P..."
+      ></textarea>
+      <div class="btn-row">
+        <button id="parse-btn">解 析</button>
+      </div>
+    </section>
+
+    <p id="error" class="error"></p>
+    <div id="output"></div>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
