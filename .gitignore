@@ -1,0 +1,10 @@
+# mdbook
+docs/book
+
+# node
+node_modules/
+dist/
+
+# ide
+.idea/
+.vscode/
